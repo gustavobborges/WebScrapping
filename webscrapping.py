@@ -37,7 +37,7 @@ def buildrank(type):
     table = soup.find(name='table')
 
     # 3 - Estruturar o conteúdo em um Data Frame - Pandas
-    df_full = pd.read_html(str(table))[0].head(10)
+    df_full = pd.read_html(str(table))[0].head(50)
     df = df_full[['Unnamed: 0', 'PLAYER', 'TEAM', label]]
     df.columns = ['pos', 'player', 'team', 'total']
 
